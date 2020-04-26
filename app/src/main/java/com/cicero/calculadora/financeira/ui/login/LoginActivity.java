@@ -28,6 +28,7 @@ public class LoginActivity extends AppCompatActivity {
         final EditText usernameEditText = findViewById(R.id.username);
         final EditText passwordEditText = findViewById(R.id.password);
         final Button loginButton = findViewById(R.id.login);
+        //loginButton.setBackgroundColor(getResources().getColor(android.R.color.holo_red_dark));
         loadingProgressBar = findViewById(R.id.loading);
 
         passwordEditText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
@@ -45,6 +46,7 @@ public class LoginActivity extends AppCompatActivity {
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Toast.makeText(getApplicationContext(),"Cliquei no botão",Toast.LENGTH_LONG).show();
                 loadingProgressBar.setVisibility(View.VISIBLE);
                 login(usernameEditText.getText().toString(),
                         passwordEditText.getText().toString());
